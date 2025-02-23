@@ -14,8 +14,6 @@
 html {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    min-width: 500px;
-    max-width: fit-content;
     margin: auto;
 }
 body {
