@@ -1,156 +1,158 @@
+/* Import fonts */
 @font-face {
-    font-family: young-serif;
-    src: url(assets/fonts/young-serif/YoungSerif-Regular.woff2) format(woff2);
+    font-family: 'YoungSerif';
+    src: url('assets/fonts/young-serif/YoungSerif-Regular.woff2') format('woff2');
     font-weight: bold;
-    font-style: bold;
-}
-@font-face {
-    font-family: outfit;
-    src: url(assets/fonts/outfit/Outfit-Light.ttf) format(truetype);
-}
-* {
-    box-sizing: border-box;
-}
-html {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    margin: auto;
-    min-width: 700px;
-}
-body {
-    border: 0.1rem solid;
-    width:50%;
-    margin: auto;
-    max-width: 600px;
-    background-color: rgb(238, 217, 220);
-    border-radius: 2rem;
 }
 
-img {
-    display: block;
-    width: 95%;
-    margin: auto;
-    border: 0.01rem solid;
-    border-radius: 2rem;
+@font-face {
+    font-family: 'Outfit';
+    src: url('assets/fonts/outfit/Outfit-Light.ttf') format('truetype');
+}
+
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: rgb(238, 217, 220);
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
 }
 
 .page {
     background-color: white;
-    padding: 0.2rem;
-    padding: 1rem 1rem;
-    border-radius: 2rem;
+    width: 100%;
+    max-width: 600px;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+/* Image */
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 1rem;
+}
+
+/* Headings */
+h1, h2 {
+    font-family: 'YoungSerif', serif;
+    color: #5B1E3D;
 }
 
 h1 {
-    font-family: young-serif;
+    font-size: 1.8rem;
+    margin-top: 1rem;
 }
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* Description */
 .description {
-    font-family: outfit;
     font-size: 1rem;
-    font-weight: lighter;
+    color: #333;
+    margin-bottom: 1rem;
 }
-.prep {
-    font-family: outfit;
-    font-weight: bolder;
-    color: #7B274E;
-}
+
+/* Preparation Time */
 .preparation {
     background-color: hsl(30, 18%, 87%);
-    border-radius: 0.3rem;
-    font-family: outfit;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
 }
 
-.prep-div {
-    width: 90%;
-    height: 80%;
-    margin: auto;
-    padding-top: 0.5rem;
-    padding-bottom: 1rem;
+.preparation ul {
+    padding-left: 1.2rem;
 }
 
-.prep-div span {
-    font-weight: bolder; 
-    color: #06100f;
-    padding-right: 0.01rem;
-    font-size: 1.1rem;
-
+.preparation li {
+    list-style-type: disc;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
 }
 
-.prep-div ul li {
-    padding-left: 1rem;
-    font-size: 1.1rem;
-}
-.preparation li::marker {
-    color: #5B1E3D;
-    font-size: 1.2rem;
-}
-h2.ingredients {
-    font-family: young-serif;
-    font-size: 1.5rem;
-    color: brown;
-}
-.ingredients li::marker {
-    color: brown;
-}
-div.ingredients {
-    font-family: outfit;
-    font-size: 1.2rem;
-    font-weight: bolder;
-}
-div.ingredients ul li {
-    padding-left: 1rem;
-}
-.divider {
-    border-bottom: 0.01rem solid grey;
+/* Ingredients */
+.ingredients ul {
+    padding-left: 1.2rem;
 }
 
-div.instructions h2{
-    font-family: young-serif;
-    font-size: 1.5rem;
-    color: rgb(196, 32, 32);
+.ingredients li {
+    list-style-type: square;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
 }
 
+/* Instructions */
 .instructions ol {
-    font-family: outfit;
+    padding-left: 1.2rem;
 }
-.instructions span{
-    font-weight: bolder;
+
+.instructions li {
+    margin-bottom: 0.5rem;
 }
-.instructions ol li {
-    padding-left: 1rem;;
+
+.instructions span {
+    font-weight: bold;
 }
-.instructions li::marker {
-    font-family: young-serif;
-    color: rgb(196, 32, 32);
-    font-size: 1.5rem;
+
+/* Divider */
+.divider {
+    border-bottom: 1px solid grey;
+    margin: 1.5rem 0;
 }
-div.nutrition h2{
-    font-family: young-serif;
-    font-size: 1.5rem;
-    color: rgb(196, 32, 32);
-}
+
+/* Nutrition Table */
 table {
-    border-spacing: 0;
-    width: 90%;
-    height: 10rem;
-    margin: auto;
-    border-radius: 0.8rem;
-    font-family: outfit;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    margin-top: 0.5rem;
 }
+
+th, td {
+    padding: 0.5rem;
+    border-bottom: 1px solid grey;
+}
+
 th {
     text-align: left;
-    padding-left: 1rem;
 }
+
 td {
     text-align: right;
-    padding-right: 1rem;
-    font-weight: bolder;
+    font-weight: bold;
     color: #7B274E;
 }
-tr {
-    border-bottom: solid;
-}
-tr:not(:last-child) th,
-tr:not(:last-child) td {
-    border-bottom: 0.01rem solid grey;
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        padding: 0.5rem;
+    }
+    .page {
+        padding: 1rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    .description, .preparation, .instructions, .ingredients {
+        font-size: 0.95rem;
+    }
+    table {
+        font-size: 0.9rem;
+    }
 }
