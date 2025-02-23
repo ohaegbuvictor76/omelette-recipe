@@ -15,7 +15,7 @@ html {
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin: auto;
-    min-width: 320px;
+    min-width: 1000px;
 }
 body {
     border: 0.1rem solid;
